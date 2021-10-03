@@ -90,7 +90,7 @@ function buildPlot(id){
         var gaugeTrace = {
             // Get "wfreq" from data    
             value: meta.wfreq,
-                title: { text: "Belly Button Wahshing Frequency<br>Scrubs per Week" },
+                title: { text: "Belly Button Washing Frequency<br>Scrubs per Week" },
                 type: "indicator",
                 mode: "gauge+number",
                 gauge: {
