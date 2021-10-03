@@ -1,6 +1,5 @@
-// Declare function.
 function init() {
-    // Add all id's to dropdown menu
+    // Create dropdown menu
     d3.json("samples.json").then(function(data) {
         d3.select("#selDataset").selectAll("option")
             .data(data.names)
@@ -8,7 +7,6 @@ function init() {
             .append("option")
             .html((d) => 
                 `<option>${d}</option>`)
-            // Create initial plot using the first study subject's ID.
             id = data.names[0];
             buildPlot(id);
     });
@@ -69,7 +67,7 @@ function buildPlot(id){
             mode: "markers",
             // Set marker size and color for each OTU.
             marker: {
-                size: sampleValues.map(value => value * 0.70),
+                size: sampleValues.map(value=> value * 0.80),
                 color: otuIds
             }
         };
